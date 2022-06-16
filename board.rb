@@ -24,7 +24,6 @@ class Board
   end
 
   def update(cell, symbol)
-    # valid_move
     cells[cell - 1] = symbol
   end
 

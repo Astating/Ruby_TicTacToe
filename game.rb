@@ -17,7 +17,7 @@ class Game
 
     symbol = nil
     until %w[X O].include?(symbol)
-      puts "what's #{name}'s symbol ? (X/O)"
+      puts "What's #{name}'s symbol ? (X/O)"
       symbol = gets.chomp.upcase
     end
 
