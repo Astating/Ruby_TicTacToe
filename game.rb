@@ -87,12 +87,12 @@ class Game
   def the_end
     choice = nil
     until %w[1 2 3].include?(choice)
-      puts <<-HEREDOC
+      puts <<~HEREDOC
 
-What would you like to do ?
-  -Reset the board: 1
-  -Reset the game: 2
-  -Quit : 3
+        What would you like to do ?
+          -Reset the board: 1
+          -Reset the game: 2
+          -Quit : 3
       HEREDOC
 
       choice = gets.chomp.strip
@@ -104,7 +104,7 @@ What would you like to do ?
     when 2
       reset_game
     when 3
-      puts "\n Thanks for playing! \n"
+      puts "\nThanks for playing! \n"
     end
   end
 end
