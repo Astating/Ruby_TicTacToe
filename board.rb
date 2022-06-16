@@ -12,7 +12,7 @@ class Board
   end
 
   def display
-  puts <<-HEREDOC
+    puts <<-HEREDOC
 
      #{cells[0]} | #{cells[1]} | #{cells[2]}
     ---+---+---

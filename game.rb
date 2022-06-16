@@ -8,6 +8,15 @@ class Game
     @current_player = nil
   end
 
+  def start
+    create_players
+    puts "#{player_one.name} plays #{player_one.symbol}, #{player_two.name} plays #{player_two.symbol}!"
+    @current_player = player_one
+    play
+  end
+
+  private
+
   def create_players
     name = nil
     while name.to_s.strip.empty?
@@ -31,13 +40,6 @@ class Game
 
     symbol2 = player_one.symbol == 'X' ? 'O' : 'X'
     @player_two = Player.new(name2, symbol2)
-  end
-
-  def start
-    create_players
-    puts "#{player_one.name} plays #{player_one.symbol}, #{player_two.name} plays #{player_two.symbol}!"
-    @current_player = player_one
-    play
   end
 
   def play
@@ -104,7 +106,7 @@ class Game
     when 2
       reset_game
     when 3
-      puts "\nThanks for playing! \n"
+      puts "\nThanks for playing!\n"
     end
   end
 end
