@@ -52,7 +52,7 @@ class Game
     board.display
     if board.game_won?
       change_turn
-      puts "Congratulations, #{current_player.name}, you've WON!"
+      puts "Congratulations, #{current_player.name} (#{current_player.symbol}), you've WON!"
     else
       puts "\n Aah... A tie? Disappointing..."
     end
