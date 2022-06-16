@@ -10,7 +10,7 @@ class Game
 
   def create_players
     name = nil
-    while name.to_s.strip.empty? do
+    while name.to_s.strip.empty?
       puts "What's Player 1's name ?"
       name = gets.chomp
     end
@@ -54,18 +54,18 @@ class Game
     else
       puts "\n Aah... A tie? Disappointing..."
     end
-    
+
     the_end
   end
 
   def make_a_move
     loop do
       move = gets.chomp.to_i
-      if board.valid_move?(move)
-        board.update(move, current_player.symbol)
-        change_turn
-        break
-      end
+      next unless board.valid_move?(move)
+
+      board.update(move, current_player.symbol)
+      change_turn
+      break
     end
   end
 
@@ -86,7 +86,7 @@ class Game
 
   def the_end
     choice = nil
-    until %w(1 2 3).include?(choice)
+    until %w[1 2 3].include?(choice)
       puts <<-HEREDOC
 
 What would you like to do ?
